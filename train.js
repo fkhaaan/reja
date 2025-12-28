@@ -110,9 +110,8 @@ console.log("ERROR:", err);
 // A-TASK
 
 
-function countLetter(engineer, e) {
-    const word = "engineer";
-    const letter = "e";
-  return word.split(letter).length;
+function countLetter(word, letter) {
+
+  console.log(word.split(letter).length-1);
 }
-countLetter(letter);
+countLetter('engineere', 'e');
