@@ -114,4 +114,4 @@ function countLetter(word, letter) {
 
   console.log(word.split(letter).length-1);
 }
-countLetter('engineere', 'e');
+countLetter('engineer', 'e');
