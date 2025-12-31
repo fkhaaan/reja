@@ -109,9 +109,17 @@ console.log("ERROR:", err);
 */
 // A-TASK
 
-
+/*
 function countLetter(word, letter) {
 
   console.log(word.split(letter).length-1);
 }
 countLetter('engineer', 'e');
+
+*/
+
+// TASKB
+const countDigits = str =>
+  str.split('').filter(c => c >= '0' && c <= '9').length;
+
+console.log(countDigits("ad2a54y79wet0sfgb9")); 

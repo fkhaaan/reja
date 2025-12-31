@@ -2,16 +2,17 @@
  
  const mongodb = require("mongodb");
 let db;
- const connectionString = "mongodb+srv://fkhaaan:z4q1M1L3otxX1VHp@cluster0.bm2hpyn.mongodb.net/Reja?appName=Cluster0"
+ const connectionString = "mongodb+srv://fkhaaan:z4q1M1L3otxX1VHp@cluster0.bm2hpyn.mongodb.net/Reja"
  
  mongodb.connect(connectionString, {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
-}, (err, client) => {
+}, 
+(err, client) => {
    if(err) console.log("ERROR on connection mongodb");
    else {
     console.log("Mongodb connected successfully");
-    module.exports = client;
+   module.exports = client;
     const app = require("./app");
      const server = http.createServer(app);
  let PORT = 3000;
