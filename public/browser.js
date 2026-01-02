@@ -1,3 +1,4 @@
+
  console.log("FrontEnd JS ishga tushdi");
 
  function itemTemplate(item) {
@@ -11,7 +12,7 @@
                             O'zgartirish
                         </button>
                         <button 
-                         data_id="${item._id}" 
+                         data-id="${item._id}" 
                          class="delete-me btn btn-danger btn-sm">O'chirish</button>
                     </div>
                 </li>`;
@@ -31,4 +32,26 @@ let createField =document.getElementById("create-field");
  .catch((err) => {
     console.log("Iltimos, qaytadan harakat qiling");
  });
+ });
+
+ document.addEventListener("click", function(e) {
+    // delete oper
+    console.log(e.target);
+    if(e.target.classList.contains("delete-me")) {
+        if(confirm("Aniq ochirmoqchimisiz?")) {
+            axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+
+            })
+            .catch((err) => {
+                console.log("Iltimos, qaytadan harakat qiling");
+            });
+        }
+    }
+// edit oper
+    if(e.target.classList.contains("edit-me")) {
+        alert("siz edit tugmasini bosdingiz");
+    }
  });
