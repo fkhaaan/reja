@@ -119,7 +119,53 @@ countLetter('engineer', 'e');
 */
 
 // TASKB
+/*
 const countDigits = str =>
   str.split('').filter(c => c >= '0' && c <= '9').length;
 
 console.log(countDigits("ad2a54y79wet0sfgb9")); 
+*/
+
+// TaskC
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.products = { non, lagmon, cola };
+    this.time = "20:40"; 
+  }
+
+  qoldiq1() {
+    console.log(`${this.time} da ${this.products.non} ta non, ${this.products.lagmon} ta lag'mon va ${this.products.cola} ta cola mavjud edi!`);
+  }
+
+  sotish(nomi, miqdor) {
+    if (this.products[nomi] >= miqdor) {
+      this.products[nomi] -= miqdor;
+      console.log(` ${miqdor} ta ${nomi} sotildi`);
+    } else {
+      console.log(`${nomi} yetarli emas`);
+    }
+  }
+
+  qabul(nomi, miqdor) {
+    if (this.products[nomi] !== undefined) {
+      this.products[nomi] += miqdor;
+      console.log(`${miqdor} ta ${nomi} qabul qilindi`);
+    } else {
+      console.log("bu mahsulot yo'q");
+    }
+  }
+  qoldiq() {
+    console.log(`Hozir ${this.time} da ${this.products.non} ta non, ${this.products.lagmon} ta lag'mon va ${this.products.cola} ta cola mavjud!`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq1();          
+shop.sotish("non", 3);  
+shop.qabul("cola", 4);  
+shop.qoldiq();          
+
+
+
+
