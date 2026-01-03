@@ -125,7 +125,7 @@ const countDigits = str =>
 
 console.log(countDigits("ad2a54y79wet0sfgb9")); 
 */
-
+/*
 // TaskC
 class Shop {
   constructor(non, lagmon, cola) {
@@ -165,7 +165,19 @@ shop.qoldiq1();
 shop.sotish("non", 3);  
 shop.qabul("cola", 4);  
 shop.qoldiq();          
+*/
 
+// TASK D
+function checkContent(a, b) {
+  for (let letter of a) {
+    if (b.indexOf(letter) === -1) { 
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(checkContent("mitgroup", "gmtiprou")); 
 
 
 
