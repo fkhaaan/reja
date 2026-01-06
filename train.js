@@ -166,7 +166,7 @@ shop.sotish("non", 3);
 shop.qabul("cola", 4);  
 shop.qoldiq();          
 */
-
+/*
 // TASK D
 function checkContent(a, b) {
   for (let letter of a) {
@@ -178,6 +178,10 @@ function checkContent(a, b) {
 }
 
 console.log(checkContent("mitgroup", "gmtiprou")); 
+*/
+// TASK E
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
 
-
-
+console.log(reverseString("hello")); 
