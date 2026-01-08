@@ -179,9 +179,23 @@ function checkContent(a, b) {
 
 console.log(checkContent("mitgroup", "gmtiprou")); 
 */
+/*
 // TASK E
 function reverseString(str) {
     return str.split("").reverse().join("");
 }
 
 console.log(reverseString("hello")); 
+*/
+
+// TASK F
+function findDoublers(a) {
+  for (let i = 0; i < a.length; i++) {
+    if (a.indexOf(a[i]) !== a.lastIndexOf(a[i])) {
+      return true; 
+    }
+  }
+  return false; 
+}
+
+console.log(findDoublers("hello")); 
