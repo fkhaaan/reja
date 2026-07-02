@@ -1,0 +1,16 @@
+services:
+  node:
+    container_name: reja
+    image: fayzulloh27/reja-image
+    restart: always
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: bash -c "npm install && npm run dev"
+
+networks:
+  default:
+    name: reja_network
+    driver: bridge
